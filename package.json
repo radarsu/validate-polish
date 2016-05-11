@@ -1,0 +1,11 @@
+{
+  "name": "validator-polish",
+  "version": "1.0.0",
+  "description": "Validation of PESEL, NIP, REGON etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rkroh Morath <rkrohmorath@gmail.com> (http://r0ten.com/)",
+  "license": "ISC"
+}
