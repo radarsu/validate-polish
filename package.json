@@ -1,6 +1,6 @@
 {
   "name": "validator-polish",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Validation of PESEL, NIP, REGON, identity card etc.",
   "main": "index.js",
   "scripts": {

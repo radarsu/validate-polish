@@ -8,7 +8,7 @@ polishValidator.prototype = {
         if (reg.test(pesel) === false) {
             return false;
         } else {
-			
+
             var dig = ("" + pesel).split("");
             var control = (1 * parseInt(dig[0]) + 3 * parseInt(dig[1]) + 7 * parseInt(dig[2]) + 9 * parseInt(dig[3]) + 1 * parseInt(dig[4]) + 3 * parseInt(dig[5]) + 7 * parseInt(dig[6]) + 9 * parseInt(dig[7]) + 1 * parseInt(dig[8]) + 3 * parseInt(dig[9])) % 10;
             if (control === 0) {
@@ -20,7 +20,7 @@ polishValidator.prototype = {
             } else {
                 return false;
             }
-			
+
         }
     },
     nip: function(nip) {
@@ -29,7 +29,7 @@ polishValidator.prototype = {
         if (reg.test(nipWithoutDashes) === false) {
             return false;
         } else {
-			
+
             var dig = ("" + nipWithoutDashes).split("");
             var control = (6 * parseInt(dig[0]) + 5 * parseInt(dig[1]) + 7 * parseInt(dig[2]) + 2 * parseInt(dig[3]) + 3 * parseInt(dig[4]) + 4 * parseInt(dig[5]) + 5 * parseInt(dig[6]) + 6 * parseInt(dig[7]) + 7 * parseInt(dig[8])) % 11;
             if (parseInt(dig[9]) === control) {
@@ -37,7 +37,7 @@ polishValidator.prototype = {
             } else {
                 return false;
             }
-			
+
         }
     },
     regon: function(regon) {
@@ -45,7 +45,7 @@ polishValidator.prototype = {
         if (reg.test(regon) === false) {
             return false;
         } else {
-			
+
             var dig = ("" + regon).split("");
             var control = (8 * parseInt(dig[0]) + 9 * parseInt(dig[1]) + 2 * parseInt(dig[2]) + 3 * parseInt(dig[3]) + 4 * parseInt(dig[4]) + 5 * parseInt(dig[5]) + 6 * parseInt(dig[6]) + 7 * parseInt(dig[7])) % 11;
             if (control == 10) control = 0;
@@ -54,7 +54,7 @@ polishValidator.prototype = {
             } else {
                 return false;
             }
-			
+
         }
     },
     identityCard: function(number) {
@@ -72,12 +72,12 @@ polishValidator.prototype = {
         ];
 
         var getLetterValue = function(letter) {
-            for (j = 0; j < letterValues.length; j++) {
+            for (j = 0, max = letterValues.length; j < max; j++) {
                 if (letter === letterValues[j]) {
                     return j;
                 }
-                return -1;
             }
+            return -1;
         };
 
         //Check series
@@ -102,9 +102,9 @@ polishValidator.prototype = {
             1 * getLetterValue(number[6]) +
             7 * getLetterValue(number[7]) +
             3 * getLetterValue(number[8]);
-        
-		sum %= 10;
-	
+
+        sum %= 10;
+
         if (sum !== getLetterValue(number[3])) {
             return false;
         }
