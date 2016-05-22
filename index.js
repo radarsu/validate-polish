@@ -51,7 +51,7 @@ polishValidator.prototype = {
             }
         }
     },
-    validateIdentityCard: function(number) {
+    identityCard: function(number) {
         // Check length
         if (number === null || number.length !== 9) {
             return false;
@@ -108,7 +108,7 @@ polishValidator.prototype = {
      * @param {string} number - series and number of identity card to validate
      * @return {boolean} - true if identity card is valid, false if invalid
      */
-    validateIdentityCardWithSeparator: function(number) {
+    identityCardWithSeparator: function(number) {
         var self = this;
         //Check length
         if (number === null || number.length !== 10) {
@@ -119,7 +119,7 @@ polishValidator.prototype = {
             return false;
         }
         number = number.replace(/[\s-]/g, '');
-        return self.validateIdentityCard(number);
+        return self.identityCard(number);
     }
 };
 
