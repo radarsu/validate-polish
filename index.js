@@ -1,8 +1,4 @@
-var polishValidator = function() {
-
-};
-
-polishValidator.prototype = {
+var polishValidator = {
     pesel: function(pesel) {
         var reg = /^[0-9]{11}$/;
         if (reg.test(pesel) === false) {
