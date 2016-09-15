@@ -1,14 +1,28 @@
 # validate-polish
-Validation of PESEL, NIP, REGON etc.
+Validation of pesel, nip, regon, identity card etc.
 
-npm install -g validate-polish
+npm install -g validator-polish
 
 `````
-var ValidatePolish = require('validate-polish');
-var polishValidator = new ValidatePolish();
+import validatePolish = require('validate-polish');
 
-var pesel = "92060512181";
-if (!polishValidator.pesel(pesel)) {
+let pesel = "92060512181";
+if (!validatePolish.pesel(pesel)) {
   throw new Error("Invalid pesel.");
+}
+
+let nip = "115667734";
+if (!validatePolish.nip(nip)) {
+  throw new Error("Invalid nip.");
+}
+
+let regon = "1251677";
+if (!validatePolish.regon(regon)) {
+  throw new Error("Invalid regon.");
+}
+
+let identityCard = "ATG3123151";
+if (!validatePolish.identityCard(identityCard)) {
+  throw new Error("Invalid nip.");
 }
 `````
