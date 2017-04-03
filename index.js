@@ -20,6 +20,10 @@ var polishValidator = {
         }
     },
     nip: function(nip) {
+        if (typeof nip !== "string") {
+            return false;
+        }
+
         var nipWithoutDashes = nip.replace(/-/g, "");
         var reg = /^[0-9]{10}$/;
         if (reg.test(nipWithoutDashes) === false) {
