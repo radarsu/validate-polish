@@ -1,7 +1,7 @@
 # validate-polish
 Validation of pesel, nip, regon, identity card etc.
 
-npm install -g validate-polish
+`npm i validate-polish`
 
 `````
 import validatePolish = require('validate-polish');
