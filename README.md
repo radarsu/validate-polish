@@ -3,7 +3,7 @@ Validation of pesel, nip, regon, identity card etc.
 
 `npm i validate-polish`
 
-`````
+`````ts
 import validatePolish = require('validate-polish');
 
 let pesel = "92060512181";
