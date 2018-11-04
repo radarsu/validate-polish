@@ -7,6 +7,12 @@
 <a href="https://github.com/Microsoft/TypeScript" target="blank">TypeScript</a> utility for Polish developers.<br/>
 </p>
 
+<p align="center">
+	<img src="https://img.shields.io/github/license/radarsu/validate-polish.svg" />
+	<img src="https://img.shields.io/github/stars/radarsu/validate-polish.svg" />
+	<a href="https://twitter.com/radarsujs"><img src="https://img.shields.io/twitter/url/https/github.com/radarsu/validate-polish.svg?style=social" /></a>
+</p>
+
 ## Description
 
 Utility library for validation of PESEL, NIP, REGON, identity card etc. Aimed at mostly at Polish enviroment. [Polish] Walidacja numerów pesel, nip, regon, dowodu osobistego.
