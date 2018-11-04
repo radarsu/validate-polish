@@ -23,7 +23,7 @@ npm i validate-polish
 - <strong>PESEL</strong> validation.
 - <strong>NIP</strong> validation.
 - <strong>REGON</strong> validation.
-- <strong>Identity card</strong> ([Polish]: <strong>dowód osobisty</strong>) validation.
+- <strong>Identity card</strong> ([Polish] <strong>dowód osobisty</strong>) validation.
 
 ## Usage
 ```ts
