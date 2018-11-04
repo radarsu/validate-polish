@@ -23,25 +23,25 @@ npm i validate-polish
 - <strong>PESEL</strong> validation.
 - <strong>NIP</strong> validation.
 - <strong>REGON</strong> validation.
-- <strong>Identity card ([Polish]: dowód osobisty)</strong> validation.
+- <strong>Identity card</strong> (<i>[Polish]</i>: <strong>dowód osobisty</strong>) validation.
 
 ## Usage
 ```ts
 import validatePolish from 'validate-polish';
 
-if (!validatePolish.pesel('92060512181)) {
-    throw new Error('Invalid pesel.');
+if (!validatePolish.pesel(`92060512181`)) {
+    throw new Error(`Invalid pesel.`);
 }
 
 if (!validatePolish.nip('115667734')) {
-    throw new Error('Invalid nip.');
+    throw new Error(`Invalid nip.`);
 }
 
-if (!validatePolish.regon('1251677)) {
+if (!validatePolish.regon(`1251677`)) {
     throw new Error('Invalid regon.');
 }
 
 if (!validatePolish.identityCard(identityCard)) {
-    throw new Error('Invalid nip.');
+    throw new Error(`Invalid nip.`);
 }
 ```
