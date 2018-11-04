@@ -1,39 +1,47 @@
 <p align="center">
-    <a href="https://github.com/radarsu/kill-process-on-port/" target="blank"><img src="https://raw.githubusercontent.com/radarsu/kill-process-on-port/master/assets/logo.png" alt="kill-process-on-port" /></a><br/>
-    <strong>Not responding, unresponsive process killer. Kill process on port you wanna use.</strong>
+    <a href="https://github.com/radarsu/validate-polish/" target="blank"><img src="https://raw.githubusercontent.com/radarsu/validate-polish/master/assets/logo.png" alt="validate-polish" /></a><br/>
+    <strong>Simple validation of PESEL, NIP, REGON, identity card.</strong>
 </p>
 
 <p align="center">
-<a href="https://github.com/Microsoft/TypeScript" target="blank">TypeScript</a> process killer utility function that greatly speeds up development.<br/>
+<a href="https://github.com/Microsoft/TypeScript" target="blank">TypeScript</a> utility for Polish developers.<br/>
 </p>
 
 ## Description
 
-If you work with application that occupies some port and sometimes hangs up - you definitely should start using `kill-process-on-port`. <strong>It shows you a prompt in console</strong>, then you choose to either kill and application occupying port or not. Safe and sound!
+Utility library for validation of PESEL, NIP, REGON, identity card etc. Aimed at mostly at Polish enviroment. [Polish] Walidacja numerów pesel, nip, regon, dowodu osobistego.
 
 ## Installation
 
 ```sh
-npm i kill-process-on-port
+npm i validate-polish
 ```
 
 ## Features
 
-- <strong>TypeScript</strong> with documentation in comments.
-- <strong>Both Windows and Linux</strong> support. Uses built-in commands: `netstat` on Windows and `fuser` on Linux.
-- <strong>Prompts</strong> for confirmation before killing process (by <a href="https://github.com/SBoudrias/Inquirer.js/" target="_blank" alt="inquirer">inquirer</a>).
+- <strong>Fast, lightweight, no dependencies</strong> required.
+- <strong>PESEL</strong> validation.
+- <strong>NIP</strong> validation.
+- <strong>REGON</strong> validation.
+- <strong>Identity card ([Polish]: dowód osobisty)</strong> validation.
 
 ## Usage
 ```ts
-import {
-    killProcessOnPort,
-} from 'kill-process-on-port';
+import validatePolish from 'validate-polish';
 
-(async () => {
+if (!validatePolish.pesel('92060512181)) {
+    throw new Error('Invalid pesel.');
+}
 
-    await killProcessOnPort(3000).catch((err) => {
-        console.log(err);
-    });
+if (!validatePolish.nip('115667734')) {
+    throw new Error('Invalid nip.');
+}
 
-})();
+if (!validatePolish.regon('1251677)) {
+    throw new Error('Invalid regon.');
+}
+
+if (!validatePolish.identityCard(identityCard)) {
+    throw new Error('Invalid nip.');
+}
 ```
