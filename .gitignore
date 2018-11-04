@@ -1,0 +1,10 @@
+node_modules
+test
+src/**.js
+.idea/*
+
+coverage
+.nyc_output
+*.log
+
+yarn.lock
