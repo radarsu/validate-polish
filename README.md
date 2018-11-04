@@ -8,6 +8,7 @@
 </p>
 
 <p align="center">
+	<a href="https://www.npmjs.com/package/validate-polish" target="_blank" alt="npm validate-polish"><img src="https://img.shields.io/npm/v/validate-polish.svg" alt="npm" /></a>
 	<img src="https://img.shields.io/github/license/radarsu/validate-polish.svg" />
 	<img src="https://img.shields.io/github/stars/radarsu/validate-polish.svg" />
 	<a href="https://twitter.com/radarsujs"><img src="https://img.shields.io/twitter/url/https/github.com/radarsu/validate-polish.svg?style=social" /></a>
