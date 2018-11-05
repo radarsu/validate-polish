@@ -154,4 +154,4 @@ export const validatePolish = {
     }
 };
 
-module.exports = validatePolish;
+export default validatePolish;

@@ -45,7 +45,7 @@ if (!validatePolish.nip('115667734')) {
 }
 
 if (!validatePolish.regon(`1251677`)) {
-    throw new Error('Invalid regon.');
+    throw new Error(`Invalid regon.`);
 }
 
 if (!validatePolish.identityCard(identityCard)) {
