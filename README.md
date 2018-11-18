@@ -34,7 +34,7 @@ npm i validate-polish
 
 ## Usage
 ```ts
-import validatePolish from 'validate-polish';
+import { validatePolish } from 'validate-polish';
 
 if (!validatePolish.pesel(`92060512181`)) {
     throw new Error(`Invalid pesel.`);
@@ -48,7 +48,7 @@ if (!validatePolish.regon(`1251677`)) {
     throw new Error(`Invalid regon.`);
 }
 
-if (!validatePolish.identityCard(identityCard)) {
-    throw new Error(`Invalid nip.`);
+if (!validatePolish.identityCard(`14124142`)) {
+    throw new Error(`Invalid identity card.`);
 }
 ```
