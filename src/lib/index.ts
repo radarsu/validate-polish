@@ -5,24 +5,16 @@ export const validatePolish = {
      * @returns
      */
     pesel(pesel: string) {
-        const reg = /^[0-9]{11}$/;
-        if (reg.test(pesel) === false) {
-            return false;
-        } else {
+      if (!/^[0-9]{11}$/.test(pesel)) {
+        return false;
+      }
+      const times = [1, 3, 7, 9];
+      const digits = `${pesel}`.split('').map(digit => parseInt(digit, 10));
+      const dig11 = digits.splice(-1)[0];
+      let control = digits
+        .reduce((previousValue, currentValue, index) => previousValue + currentValue * times[index % 4]) % 10;
 
-            const dig = ('' + pesel).split('');
-            let control = (1 * parseInt(dig[0], 10) + 3 * parseInt(dig[1], 10) + 7 * parseInt(dig[2], 10) + 9 * parseInt(dig[3], 10) + 1 * parseInt(dig[4], 10) + 3 * parseInt(dig[5], 10) + 7 * parseInt(dig[6], 10) + 9 * parseInt(dig[7], 10) + 1 * parseInt(dig[8], 10) + 3 * parseInt(dig[9], 10)) % 10;
-            if (control === 0) {
-                control = 10;
-            }
-            control = 10 - control;
-            if (parseInt(dig[10], 10) === control) {
-                return true;
-            } else {
-                return false;
-            }
-
-        }
+      return 10 - (control === 0 ? 10 : control) === dig11;
     },
     /**
      * Validation of NIP.
