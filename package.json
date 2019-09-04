@@ -1,6 +1,6 @@
 {
   "name": "validate-polish",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Utility library for validation of PESEL, NIP, REGON, identity card etc. Aimed at mostly at Polish enviroment. [Polish] Walidacja numerów pesel, nip, regon, dowodu osobistego.",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",

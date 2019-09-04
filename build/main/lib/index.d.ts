@@ -30,3 +30,4 @@ export declare const validatePolish: {
      */
     identityCardWithSeparator(num: string): boolean;
 };
+export default validatePolish;
