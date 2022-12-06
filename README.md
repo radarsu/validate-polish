@@ -3,6 +3,8 @@
     <div>Utility library for validation of PESEL, NIP, REGON, identity card etc. Aimed mostly at Polish enviroment. [Polish] Walidacja numerów pesel, nip, regon, dowodu osobistego.</div>
 </p>
 
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/radarsu)
+
 ## Table of contents
 
 1. [Getting Started](#getting-started)
