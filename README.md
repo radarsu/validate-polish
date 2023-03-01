@@ -1,6 +1,7 @@
 <p align="center">
     <h1>validate-polish</h1>
-    <div>Utility library for validation of PESEL, NIP, REGON, and identity card numbers. Aimed mostly at the Polish environment. [Polish] Walidacja numerów PESEL, NIP, REGON, oraz dowodu osobistego.</div>
+    <div>Utility library for validation of PESEL, NIP, REGON, and identity card numbers. Aimed mostly at the Polish environment.</div>
+    <div>[Polish] Walidacja numerów PESEL, NIP, REGON, oraz dowodu osobistego.</div>
 </p>
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/radarsu)
