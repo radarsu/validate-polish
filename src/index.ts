@@ -88,8 +88,7 @@ export const validatePolish = {
      * Validation of REGON.
      */
     regon(regon: string): boolean {
-        const reg = /^[0-9]{9,14}$/u;
-        if (!reg.test(regon)) {
+        if (!/^[0-9]{9}$/u.test(regon) && !/^[0-9]{14}$/u.test(regon)) {
             return false;
         }
 
