@@ -12,4 +12,8 @@ test(`regon`, () => {
         const isValid = validatePolish.regon(regon);
         expect(isValid).toBeFalsy();
     }
+
+    // 100000008 is a real 9-digit checksum. A tenth digit is not a REGON.
+    expect(validatePolish.regon(`100000008`)).toBeTruthy();
+    expect(validatePolish.regon(`1000000086`)).toBeFalsy();
 });
